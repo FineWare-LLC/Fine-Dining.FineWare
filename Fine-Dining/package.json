@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "predeploy": "npm run clean && vite build && echo 'fine-dining.fineware.tech' > dist/CNAME",
     "deploy": "gh-pages -d dist --dotfiles",
-    "postdeploy": "echo 'fine-dining.fineware.tech' > dist/CNAME",
+    "postdeploy": "echo 'fine-dining.fineware.tech' > dist/CNAME"
 
   },
   "devDependencies": {
