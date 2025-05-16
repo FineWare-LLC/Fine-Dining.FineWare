@@ -159,35 +159,6 @@ function assembleDetails(): void {
         <p>Fine Dining leverages linear programming to address the challenges of meal planning, combining cost optimization with personalized dietary requirements...</p>
       `,
     },
-    {
-      title: 'Justification',
-      html: `
-        <p>Human diet planning is complex and costly, and current apps often lack simultaneous cost and nutrition optimization...</p>
-      `,
-    },
-    {
-      title: 'Project Standards',
-      html: `
-        <ul>
-          <li>User login & registration</li>
-          <li>Meal plan generation</li>
-          <li>Cost optimization & allergen filtering</li>
-          <li>…and more (see full spec on GitHub)</li>
-        </ul>
-      `,
-    },
-    {
-      title: 'Design & Architecture',
-      html: `
-        <p>Deployed on AWS EC2 with Firebase Auth. RESTful microservices backend, Next.js frontend, ER diagrams, DDL scripts.</p>
-      `,
-    },
-    {
-      title: 'Cost & Timeline',
-      html: `
-        <p>Estimated cost: $29,000 USD. Schedule: Jan 1, 2025 – Jul 31, 2025. Test cases: TC-001 – TC-060.</p>
-      `,
-    },
   ];
 
   app.append(buildDetailsHeader());
