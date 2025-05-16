@@ -80,6 +80,21 @@ h1 {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 
+.details__cta {
+  display: inline-block;
+  margin-top: 3rem;    
+  margin-bottom: 3rem;      /* space above it */
+  background-color: #79E2F0;   /* your custom teal */
+  color: black;                 /* white text */
+  padding: 0.75rem 1.5rem;     /* adjust to taste */
+  border-radius: 25rem;      /* optional rounding */
+  text-decoration: none;       /* remove underline */
+  font-weight: 600;            /* optional emphasis */
+  max-width: 200px;     /* or 15ch, 60%, etc. based on your visual preference */
+  margin: 3rem auto 2rem auto;
+  text-align: center;
+}
+
 .logo {
   height: 6em;
   will-change: filter;
@@ -150,4 +165,22 @@ button:focus-visible {
 
 .footer:hover {
   filter: drop-shadow(0 0 2em #3178c6aa);
+}
+
+/* make code blocks stand out, preserve whitespace, and left-align them */
+.details__code-block {
+  background-color: #1e1e1e;
+  color: #f8f8f2;
+  font-family: Menlo, Consolas, Monaco, 'Courier New', monospace;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;        /* horizontal scroll if it’s too wide */
+  white-space: pre-wrap;   /* preserve your line breaks & indentation */
+  text-align: left;        /* force left alignment */
+  margin: 1.5rem 0;        /* some breathing room */
+}
+
+/* if your .details__section is doing `text-align: center`, override it here */
+.details__section .details__code-block {
+  text-align: left !important;
 }
