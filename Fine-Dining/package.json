@@ -9,9 +9,9 @@
     "build": "tsc && vite build",
     "clean": "rm -rf dist",
     "preview": "vite preview",
-    "predeploy": "vite build",
+    "predeploy": "npm run clean && vite build && echo 'fine-dining.fineware.tech' > dist/CNAME",
+    "deploy": "gh-pages -d dist --dotfiles",
     "postdeploy": "echo 'fine-dining.fineware.tech' > dist/CNAME",
-    "deploy": "gh-pages -d dist"
 
   },
   "devDependencies": {
