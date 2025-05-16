@@ -26,34 +26,27 @@ export function createElement<K extends keyof HTMLElementTagNameMap>(
 }
 
 /**
- * Builds the top nav bar with both Vite and FineWare logos.
+ * Builds the top nav bar with the Fine-Dining logo.
  */
 function buildHeader(): HTMLElement {
   const header = createElement('header', { classes: ['header'] });
-  const nav = createElement('nav', { classes: ['nav'] });
 
-  nav.append(
-    makeLogoLink(logoSrc, 'Vite Logo', 'https://github.com/FineWare-LLC/Fine-Dining.git', ['logo']),
-    makeLogoLink(fwLogoSrc, 'FineWare Logo', 'https://fineware.tech', ['logo', 'fw-logo'])
-  );
+  const logo = createElement('img', {
+    classes: ['logo', 'fine-dining-logo'],
+    attrs: { src: logoSrc, alt: 'Fine Dining Logo' },
+  });
 
-  header.append(nav);
+  const link = createElement('a', {
+    attrs: {
+      href: 'https://github.com/FineWare-LLC/Fine-Dining.git',
+      target: '_blank',
+      rel: 'noopener',
+    },
+  });
+
+  link.append(logo);
+  header.append(link);
   return header;
-}
-
-/**
- * Creates an <a> wrapping an <img> for a logo.
- */
-function makeLogoLink(
-  src: string,
-  alt: string,
-  href: string,
-  classes: string[]
-): HTMLAnchorElement {
-  const a = createElement('a', { attrs: { href, target: '_blank', rel: 'noopener' } });
-  const img = createElement('img', { classes, attrs: { src, alt } });
-  a.append(img);
-  return a;
 }
 
 /**
@@ -61,23 +54,34 @@ function makeLogoLink(
  */
 function buildHero(): HTMLElement {
   const hero = createElement('section', { classes: ['hero'] });
+
   const title = createElement('h1', {
     classes: ['hero__title'],
     innerHTML: 'Welcome to <strong>Fine Dining</strong>',
   });
+
   const subtitle = createElement('p', {
     classes: ['hero__subtitle'],
-    innerHTML: 'Optimized, personalized meal planning—powered by linear programming.',
+    innerHTML: 'Personalized meal plans created specifically for <strong><i>your</i></strong> dietary needs and budget using advanced algorithms.',
   });
 
-  // Use an <a> for real navigation
   const cta = createElement('a', {
     classes: ['btn', 'btn--primary', 'hero__cta'],
     attrs: { href: `${import.meta.env.BASE_URL}details` },
     innerHTML: 'Learn More',
   });
 
-  hero.append(title, subtitle, cta);
+  const poweredByText = createElement('p', {
+    classes: ['powered-by'],
+    innerHTML: 'Powered by:',
+  });
+
+  const fwLogo = createElement('img', {
+    classes: ['logo', 'fw-logo'],
+    attrs: { src: fwLogoSrc, alt: 'FineWare Logo' },
+  });
+
+  hero.append(title, subtitle, cta, poweredByText, fwLogo);
   return hero;
 }
 
