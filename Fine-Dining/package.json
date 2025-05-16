@@ -8,8 +8,10 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "predeploy": "echo 'fine-dining.fineware.tech' > dist/CNAME && vite build",
+    "predeploy": "vite build",
+    "postdeploy": "echo 'fine-dining.fineware.tech' > dist/CNAME",
     "deploy": "gh-pages -d dist"
+
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.4.1",
