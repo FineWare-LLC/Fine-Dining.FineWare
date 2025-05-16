@@ -6,7 +6,7 @@ import fwLogoSrc from '/fwlogo.png';
 /**
  * Universal helper to create an element and apply classes, attrs, and/or raw HTML.
  */
-function createElement<K extends keyof HTMLElementTagNameMap>(
+export function createElement<K extends keyof HTMLElementTagNameMap>(
   tagName: K,
   options: {
     classes?: string[];
@@ -73,7 +73,7 @@ function buildHero(): HTMLElement {
   // Use an <a> for real navigation
   const cta = createElement('a', {
     classes: ['btn', 'btn--primary', 'hero__cta'],
-    attrs: { href: 'details.ts' },
+    attrs: { href: `${import.meta.env.BASE_URL}details` },
     innerHTML: 'Learn More',
   });
 
@@ -84,7 +84,7 @@ function buildHero(): HTMLElement {
 /**
  * Small site footer.
  */
-function buildFooter(): HTMLElement {
+export function buildFooter(): HTMLElement {
   const footer = createElement('footer', { classes: ['footer'] });
   footer.append(
     createElement('p', {
@@ -168,10 +168,12 @@ function assembleDetails(): void {
 
 // Kick things off based on URL
 document.addEventListener('DOMContentLoaded', () => {
-  const path = window.location.pathname;
-  if (path.endsWith('details.ts')) {
-    assembleDetails();
+  const path = window.location.pathname.replace(import.meta.env.BASE_URL, '/');
+
+  if (path === '/details') {
+    import('./details').then(mod => mod.assembleDetails());
   } else {
     assembleHome();
   }
 });
+

@@ -119,16 +119,13 @@ button:focus-visible {
 }
 
 .footer {
-  position: fixed;          /* pin it relative to the viewport */
   bottom: 1rem;             /* 1rem up from the very bottom */
   left: 50%;                /* center it horizontally… */
-  transform: translateX(-50%); /* …by shifting back half its own width */
   
   padding: 0.75rem 1.5rem;  
   border-radius: 0.5rem;    
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   
-  z-index: 1000;            /* float on top of everything else */
   max-width: 90%;           /* optional: constrain on small screens */
   text-align: center;
 }
