@@ -1,4 +1,4 @@
-import{c as e,b as d}from"./index-CGb260Y6.js";function c(){const n=e("header",{classes:["header"]}),i=e("a",{classes:["btn","btn--link"],attrs:{href:"/"},innerHTML:"← Back to Home"});return n.append(i),n}function p(n,i){const a=e("section",{classes:["details__section"]}),o=e("h2",{innerHTML:n}),t=e("div",{innerHTML:i});return a.append(o,t),a}function l(n,i="language-js"){const a=e("pre",{classes:["details__code-block"]}),o=e("code",{classes:[i]});return o.textContent=n,a.append(o),a}function g(){return e("a",{classes:["btn","btn--primary","details__cta"],attrs:{href:"https://github.com/FineWare-LLC/Fine-Dining",target:"_blank",rel:"noopener"},innerHTML:"Get Started"})}function m(){const n=document.querySelector("#app");if(!n)throw new Error("#app not found");n.innerHTML="";const i=[{title:"Overview",html:`
+import{c as e,b as c}from"./index-DVGR99E2.js";function d(){const n=e("header",{classes:["header"]}),a=e("a",{classes:["btn","btn--link"],attrs:{href:"/"},innerHTML:"← Back to Home"});return n.append(a),n}function p(n,a){const i=e("section",{classes:["details__section"]}),o=e("h2",{innerHTML:n}),t=e("div",{innerHTML:a});return i.append(o,t),i}function l(n,a="language-js"){const i=e("pre",{classes:["details__code-block"]}),o=e("code",{classes:[a]});return o.textContent=n,i.append(o),i}function g(){return e("a",{classes:["btn","btn--primary","details__cta"],attrs:{href:"https://github.com/FineWare-LLC/Fine-Dining",target:"_blank",rel:"noopener"},innerHTML:"Get Started"})}function m(){const n=document.querySelector("#app");if(!n)throw new Error("#app not found");n.innerHTML="";const a=[{title:"Overview",html:`
         <p><strong>Fine Dining</strong> leverages advanced algorithms to address the challenges of meal planning, combining cost optimization with personalized dietary requirements. The system integrates nutritional data, user-specific dietary restrictions, and budget constraints to provide tailored meal plans that are cost-effective and nutritionally balanced.</p>
         <p>It dynamically adjusts its recommendations based on each user’s individual budget, ensuring affordability without sacrificing nutritional goals. Fine Dining is designed to be accessible and easy to use for individuals and scalable for organizations like schools, hospitals, and corporations. The application also allows users to incorporate flexible dietary preferences such as allergen filtering and cheat-day tracking.</p>
       `},{title:"Project Background",html:`
@@ -44,26 +44,22 @@ import{c as e,b as d}from"./index-CGb260Y6.js";function c(){const n=e("header",{
         </div>
 
         <h3>Diagrams</h3>
-
-        <h4>Logical Solution Design</h4>
-        <div class="diagram-embed">
-          <iframe style="border:none" width="800" height="450"
-            src="https://whimsical.com/embed/JMVCfTX88NQAqTYwnQV2bo@6HYTAunKLgTUkpzRCZXo6HtyAHif85EY5udEZuxsxFnAxpj"
-            title="Flow Charts & Process Flows"></iframe>
-        </div>
-
-        <h4>Sitemap</h4>
-        <div class="diagram-embed">
-          <iframe style="border:none" width="800" height="450"
-            src="https://whimsical.com/embed/HMyXY8FCoaFnhbKAuMGLvr@6HYTAunKLgTUkgZPF92MKgK37X6xpphijmN8rBo2SSJ7FBV"
-            title="Sitemap Diagram"></iframe>
-        </div>
-
-        <h4>Process Flowchart</h4>
-        <div class="diagram-embed">
-          <iframe style="border:none" width="800" height="450"
-            src="https://whimsical.com/embed/PMrTaV7peAQgWKwVcgJSpV@6HYTAunKLgTUjoB5w3YwtPN8kmcfwMRUko12ihFRG6DP9Nr"
-            title="Logical & Physical Solution Design"></iframe>
+        <div class="details__diagram-gallery">
+          <figure>
+            <figcaption><strong>Logical Solution Design</strong></figcaption>
+            <img src="/Logical.png" alt="Logical Solution Design Diagram" />
+            <p class="details__diagram-desc">This mind-map shows the Logical Solution Design of Fine Dining, breaking down the Presentation Layer (UI, Dashboard), Business Logic Layer (API Endpoints, LP Module, Authentication), and Data Layer (MongoDB storage and external integrations).</p>
+          </figure>
+          <figure>
+            <figcaption><strong>Sitemap</strong></figcaption>
+            <img src="/Sitemap.png" alt="Sitemap Diagram" />
+            <p class="details__diagram-desc">The sitemap outlines the main user flow: Home → Login/Registration → Dashboard → Meal Plan Creation → Preferences → Reports & Analytics → Settings → Help, with key sub-pages for each stage.</p>
+          </figure>
+          <figure>
+            <figcaption><strong>Process Flowchart</strong></figcaption>
+            <img src="/Process.png" alt="Process Flowchart" />
+            <p class="details__diagram-desc">This flowchart depicts the runtime sequence: Start → Collect Inputs → Input Validation → Data Fetching → Linear Programming Solver → Plan Generation → Output delivery.</p>
+          </figure>
         </div>
     
         <h3>Prototypes</h3>
@@ -89,7 +85,7 @@ import{c as e,b as d}from"./index-CGb260Y6.js";function c(){const n=e("header",{
             </a>
           </li>
         </ul>
-      `}],a=`const Recommendations = React.memo(({ restaurants }) => {
+      `}],i=`const Recommendations = React.memo(({ restaurants }) => {
   if (!restaurants || restaurants.length === 0) {
     return (
       <p className="text-gray-500 text-center">
@@ -127,7 +123,7 @@ import{c as e,b as d}from"./index-CGb260Y6.js";function c(){const n=e("header",{
 
 const filteredMeals = data?.getAllMeals?.filter(meal =>
   meal.mealName.toLowerCase().includes(searchTerm.toLowerCase())
-);`;n.append(c()),i.forEach(r=>n.append(p(r.title,r.html)));const t=e("section",{classes:["details__section"]});t.append(e("h3",{innerHTML:"Code Snippets"})),t.append(e("h4",{innerHTML:"Dynamic Restaurant Recommendations"})),t.append(l(a,"language-jsx")),t.append(e("h4",{innerHTML:"Meal Catalog Search + Filter"})),t.append(l(o,"language-js")),n.append(t);const s=e("section",{classes:["details__section"]});s.append(e("h2",{innerHTML:"Running Fine Dining"})),s.append(e("div",{innerHTML:`
+);`;n.append(d()),a.forEach(r=>n.append(p(r.title,r.html)));const t=e("section",{classes:["details__section"]});t.append(e("h3",{innerHTML:"Code Snippets"})),t.append(e("h4",{innerHTML:"Dynamic Restaurant Recommendations"})),t.append(l(i,"language-jsx")),t.append(e("h4",{innerHTML:"Meal Catalog Search + Filter"})),t.append(l(o,"language-js")),n.append(t);const s=e("section",{classes:["details__section"]});s.append(e("h2",{innerHTML:"Running Fine Dining"})),s.append(e("div",{innerHTML:`
       <div style="text-align: left; margin: 0;">
         <p><strong>Prerequisites:</strong></p>
         <ul>
@@ -168,4 +164,4 @@ const filteredMeals = data?.getAllMeals?.filter(meal =>
           <li>Access at <code>http://localhost:3000</code></li>
         </ul>
       </div>
-    `})),n.append(s),n.append(g(),d())}export{m as assembleDetails};
+    `})),n.append(s),n.append(g(),c())}export{m as assembleDetails};
