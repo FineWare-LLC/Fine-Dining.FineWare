@@ -73,7 +73,7 @@ function buildHero(): HTMLElement {
   // Use an <a> for real navigation
   const cta = createElement('a', {
     classes: ['btn', 'btn--primary', 'hero__cta'],
-    attrs: { href: 'details.ts' },
+    attrs: { href: 'details.html' },
     innerHTML: 'Learn More',
   });
 
@@ -198,7 +198,7 @@ function assembleDetails(): void {
 // Kick things off based on URL
 document.addEventListener('DOMContentLoaded', () => {
   const path = window.location.pathname;
-  if (path.endsWith('details.ts')) {
+  if (path.endsWith('details.html')) {
     assembleDetails();
   } else {
     assembleHome();
