@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://fineware-llc.github.io/Fine-Dining.FineWare",
+  "homepage": "https://fine-dining.fineware.tech",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
