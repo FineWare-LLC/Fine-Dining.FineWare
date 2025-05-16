@@ -1,4 +1,4 @@
-import{c as e,b as d}from"./index-DpsGSqfp.js";function c(){const t=e("header",{classes:["header"]}),i=e("a",{classes:["btn","btn--link"],attrs:{href:"/"},innerHTML:"← Back to Home"});return t.append(i),t}function p(t,i){const a=e("section",{classes:["details__section"]}),o=e("h2",{innerHTML:t}),n=e("div",{innerHTML:i});return a.append(o,n),a}function l(t,i="language-js"){const a=e("pre",{classes:["details__code-block"]}),o=e("code",{classes:[i]});return o.textContent=t,a.append(o),a}function m(){return e("a",{classes:["btn","btn--primary","details__cta"],attrs:{href:"https://github.com/FineWare-LLC/Fine-Dining",target:"_blank",rel:"noopener"},innerHTML:"Get Started"})}function u(){const t=document.querySelector("#app");if(!t)throw new Error("#app not found");t.innerHTML="";const i=[{title:"Overview",html:`
+import{c as e,b as d}from"./index-CGb260Y6.js";function c(){const n=e("header",{classes:["header"]}),i=e("a",{classes:["btn","btn--link"],attrs:{href:"/"},innerHTML:"← Back to Home"});return n.append(i),n}function p(n,i){const a=e("section",{classes:["details__section"]}),o=e("h2",{innerHTML:n}),t=e("div",{innerHTML:i});return a.append(o,t),a}function l(n,i="language-js"){const a=e("pre",{classes:["details__code-block"]}),o=e("code",{classes:[i]});return o.textContent=n,a.append(o),a}function g(){return e("a",{classes:["btn","btn--primary","details__cta"],attrs:{href:"https://github.com/FineWare-LLC/Fine-Dining",target:"_blank",rel:"noopener"},innerHTML:"Get Started"})}function m(){const n=document.querySelector("#app");if(!n)throw new Error("#app not found");n.innerHTML="";const i=[{title:"Overview",html:`
         <p><strong>Fine Dining</strong> leverages advanced algorithms to address the challenges of meal planning, combining cost optimization with personalized dietary requirements. The system integrates nutritional data, user-specific dietary restrictions, and budget constraints to provide tailored meal plans that are cost-effective and nutritionally balanced.</p>
         <p>It dynamically adjusts its recommendations based on each user’s individual budget, ensuring affordability without sacrificing nutritional goals. Fine Dining is designed to be accessible and easy to use for individuals and scalable for organizations like schools, hospitals, and corporations. The application also allows users to incorporate flexible dietary preferences such as allergen filtering and cheat-day tracking.</p>
       `},{title:"Project Background",html:`
@@ -67,27 +67,28 @@ import{c as e,b as d}from"./index-DpsGSqfp.js";function c(){const t=e("header",{
         </div>
     
         <h3>Prototypes</h3>
-
-        <h4>Web Design</h4>
-        <div style="position: relative; width: 100%; height: 0; padding-top: 62.5%; box-shadow: 0 2px 8px rgba(63,69,81,0.16); margin: 1.6em 0; overflow: hidden; border-radius: 8px;">
-          <iframe loading="lazy"
-            style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;"
-            src="https://www.canva.com/design/DAGb9hD06yg/LQo6YS0kU5UxmEU7uu1kmQ/watch?embed"
-            title="Canva Prototype: User Flows"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <p><a href="https://www.canva.com/design/DAGb9hD06yg/LQo6YS0kU5UxmEU7uu1kmQ/watch?utm_content=DAGb9hD06yg&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Fine Dining Web</a> by Cybyl J. Fine</p>
-
-        <h4>Mobile Design</h4>
-        <div style="position: relative; width: 100%; height: 0; padding-top: 216.4251%;
-        padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-        border-radius: 8px; will-change: transform;">
-          <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-            src="https://www.canva.com/design/DAGb9gj3T0A/aLKr0KFmlWvbGTcCdOq7QQ/watch?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-          </iframe>
-        </div>
-        <p><a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGb9gj3T0A&#x2F;aLKr0KFmlWvbGTcCdOq7QQ&#x2F;watch?utm_content=DAGb9gj3T0A&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Fine Dining Mobile</a> by Cybyl J. Fine</p>
+        <ul class="details__prototype-links">
+          <li>
+            <strong>Web Design:</strong>
+            <a
+              href="https://www.canva.com/design/DAGb9hD06yg/LQo6YS0kU5UxmEU7uu1kmQ/watch?utm_content=DAGb9hD06yg"
+              target="_blank"
+              rel="noopener"
+            >
+              View Fine Dining Web Prototype
+            </a>
+          </li>
+          <li>
+            <strong>Mobile Design:</strong>
+            <a
+              href="https://www.canva.com/design/DAGb9gj3T0A/aLKr0KFmlWvbGTcCdOq7QQ/watch?utm_content=DAGb9gj3T0A"
+              target="_blank"
+              rel="noopener"
+            >
+              View Fine Dining Mobile Prototype
+            </a>
+          </li>
+        </ul>
       `}],a=`const Recommendations = React.memo(({ restaurants }) => {
   if (!restaurants || restaurants.length === 0) {
     return (
@@ -126,7 +127,7 @@ import{c as e,b as d}from"./index-DpsGSqfp.js";function c(){const t=e("header",{
 
 const filteredMeals = data?.getAllMeals?.filter(meal =>
   meal.mealName.toLowerCase().includes(searchTerm.toLowerCase())
-);`;t.append(c()),i.forEach(r=>t.append(p(r.title,r.html)));const n=e("section",{classes:["details__section"]});n.append(e("h3",{innerHTML:"Code Snippets"})),n.append(e("h4",{innerHTML:"Dynamic Restaurant Recommendations"})),n.append(l(a,"language-jsx")),n.append(e("h4",{innerHTML:"Meal Catalog Search + Filter"})),n.append(l(o,"language-js")),t.append(n);const s=e("section",{classes:["details__section"]});s.append(e("h2",{innerHTML:"Running Fine Dining"})),s.append(e("div",{innerHTML:`
+);`;n.append(c()),i.forEach(r=>n.append(p(r.title,r.html)));const t=e("section",{classes:["details__section"]});t.append(e("h3",{innerHTML:"Code Snippets"})),t.append(e("h4",{innerHTML:"Dynamic Restaurant Recommendations"})),t.append(l(a,"language-jsx")),t.append(e("h4",{innerHTML:"Meal Catalog Search + Filter"})),t.append(l(o,"language-js")),n.append(t);const s=e("section",{classes:["details__section"]});s.append(e("h2",{innerHTML:"Running Fine Dining"})),s.append(e("div",{innerHTML:`
       <div style="text-align: left; margin: 0;">
         <p><strong>Prerequisites:</strong></p>
         <ul>
@@ -167,4 +168,4 @@ const filteredMeals = data?.getAllMeals?.filter(meal =>
           <li>Access at <code>http://localhost:3000</code></li>
         </ul>
       </div>
-    `})),t.append(s),t.append(m(),d())}export{u as assembleDetails};
+    `})),n.append(s),n.append(g(),d())}export{m as assembleDetails};
