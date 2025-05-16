@@ -153,27 +153,28 @@ export function assembleDetails(): void {
         </div>
     
         <h3>Prototypes</h3>
-
-        <h4>Web Design</h4>
-        <div style="position: relative; width: 100%; height: 0; padding-top: 62.5%; box-shadow: 0 2px 8px rgba(63,69,81,0.16); margin: 1.6em 0; overflow: hidden; border-radius: 8px;">
-          <iframe loading="lazy"
-            style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;"
-            src="https://www.canva.com/design/DAGb9hD06yg/LQo6YS0kU5UxmEU7uu1kmQ/watch?embed"
-            title="Canva Prototype: User Flows"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <p><a href="https://www.canva.com/design/DAGb9hD06yg/LQo6YS0kU5UxmEU7uu1kmQ/watch?utm_content=DAGb9hD06yg&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Fine Dining Web</a> by Cybyl J. Fine</p>
-
-        <h4>Mobile Design</h4>
-        <div style="position: relative; width: 100%; height: 0; padding-top: 216.4251%;
-        padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-        border-radius: 8px; will-change: transform;">
-          <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-            src="https://www.canva.com/design/DAGb9gj3T0A/aLKr0KFmlWvbGTcCdOq7QQ/watch?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-          </iframe>
-        </div>
-        <p><a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGb9gj3T0A&#x2F;aLKr0KFmlWvbGTcCdOq7QQ&#x2F;watch?utm_content=DAGb9gj3T0A&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Fine Dining Mobile</a> by Cybyl J. Fine</p>
+        <ul class="details__prototype-links">
+          <li>
+            <strong>Web Design:</strong>
+            <a
+              href="https://www.canva.com/design/DAGb9hD06yg/LQo6YS0kU5UxmEU7uu1kmQ/watch?utm_content=DAGb9hD06yg"
+              target="_blank"
+              rel="noopener"
+            >
+              View Fine Dining Web Prototype
+            </a>
+          </li>
+          <li>
+            <strong>Mobile Design:</strong>
+            <a
+              href="https://www.canva.com/design/DAGb9gj3T0A/aLKr0KFmlWvbGTcCdOq7QQ/watch?utm_content=DAGb9gj3T0A"
+              target="_blank"
+              rel="noopener"
+            >
+              View Fine Dining Mobile Prototype
+            </a>
+          </li>
+        </ul>
       `,
     }
     
