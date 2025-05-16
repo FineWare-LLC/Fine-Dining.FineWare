@@ -6,7 +6,6 @@ html, body {
   flex-direction: column;
 }
 
-
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -63,34 +62,25 @@ h1 {
   font-size: large;
 }
 
-/* Style & center the CTA button */
-.hero__cta {
+/* Style & center the CTA buttons */
+.hero__cta,
+.details__cta {
   display: inline-block;
-  margin-top: 3rem;    
-  margin-bottom: 3rem;      /* space above it */
-  background-color: #79E2F0;   /* your custom teal */
-  color: black;                 /* white text */
-  padding: 0.75rem 1.5rem;     /* adjust to taste */
-  border-radius: 25rem;      /* optional rounding */
-  text-decoration: none;       /* remove underline */
-  font-weight: 600;            /* optional emphasis */
+  background-color: #79E2F0;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25rem;
+  text-decoration: none;
+  font-weight: 600;
 }
-
+.hero__cta {
+  margin: 3rem 0;
+}
 .hero__cta:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
-
 .details__cta {
-  display: inline-block;
-  margin-top: 3rem;    
-  margin-bottom: 3rem;      /* space above it */
-  background-color: #79E2F0;   /* your custom teal */
-  color: black;                 /* white text */
-  padding: 0.75rem 1.5rem;     /* adjust to taste */
-  border-radius: 25rem;      /* optional rounding */
-  text-decoration: none;       /* remove underline */
-  font-weight: 600;            /* optional emphasis */
-  max-width: 200px;     /* or 15ch, 60%, etc. based on your visual preference */
+  max-width: 200px;
   margin: 3rem auto 2rem auto;
   text-align: center;
 }
@@ -101,16 +91,13 @@ h1 {
   transition: filter 300ms;
   cursor: pointer;
 }
-
 .fine-dining-logo {
   height: 10em;
   margin-top: 2em;
 }
-
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
-
 .logo.vanilla:hover {
   filter: drop-shadow(0 0 2em #3178c6aa);
 }
@@ -157,12 +144,11 @@ button:focus-visible {
 
 .footer {
   margin-top: auto;
-  border-radius: 0.5rem;    
+  border-radius: 0.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
   text-align: center;
 }
-
 .footer:hover {
   filter: drop-shadow(0 0 2em #3178c6aa);
 }
@@ -174,13 +160,75 @@ button:focus-visible {
   font-family: Menlo, Consolas, Monaco, 'Courier New', monospace;
   padding: 1rem;
   border-radius: 0.5rem;
-  overflow-x: auto;        /* horizontal scroll if it’s too wide */
-  white-space: pre-wrap;   /* preserve your line breaks & indentation */
-  text-align: left;        /* force left alignment */
-  margin: 1.5rem 0;        /* some breathing room */
+  overflow-x: auto;
+  white-space: pre-wrap;
+  text-align: left;
+  margin: 1.5rem 0;
 }
-
-/* if your .details__section is doing `text-align: center`, override it here */
 .details__section .details__code-block {
   text-align: left !important;
+}
+
+.details__prototype-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.details__prototype-links li {
+  margin-bottom: 0.75em;
+}
+.details__prototype-links a {
+  word-break: break-all;
+}
+
+/* Diagrams: single column, centered, constrained width */
+.details__diagram-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.details__diagram-gallery figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.details__diagram-gallery figcaption {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+.details__diagram-gallery img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Section spacing */
+.details__section {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+.details__section h2,
+.details__section h3,
+.details__section h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  #app {
+    padding: 0.5rem;
+  }
+  .details__diagram-gallery figure {
+    width: 100%;
+    max-width: none;
+  }
 }

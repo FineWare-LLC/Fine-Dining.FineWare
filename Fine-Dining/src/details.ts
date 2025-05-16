@@ -130,26 +130,22 @@ export function assembleDetails(): void {
         </div>
 
         <h3>Diagrams</h3>
-
-        <h4>Logical Solution Design</h4>
-        <div class="diagram-embed">
-          <iframe style="border:none" width="800" height="450"
-            src="https://whimsical.com/embed/JMVCfTX88NQAqTYwnQV2bo@6HYTAunKLgTUkpzRCZXo6HtyAHif85EY5udEZuxsxFnAxpj"
-            title="Flow Charts & Process Flows"></iframe>
-        </div>
-
-        <h4>Sitemap</h4>
-        <div class="diagram-embed">
-          <iframe style="border:none" width="800" height="450"
-            src="https://whimsical.com/embed/HMyXY8FCoaFnhbKAuMGLvr@6HYTAunKLgTUkgZPF92MKgK37X6xpphijmN8rBo2SSJ7FBV"
-            title="Sitemap Diagram"></iframe>
-        </div>
-
-        <h4>Process Flowchart</h4>
-        <div class="diagram-embed">
-          <iframe style="border:none" width="800" height="450"
-            src="https://whimsical.com/embed/PMrTaV7peAQgWKwVcgJSpV@6HYTAunKLgTUjoB5w3YwtPN8kmcfwMRUko12ihFRG6DP9Nr"
-            title="Logical & Physical Solution Design"></iframe>
+        <div class="details__diagram-gallery">
+          <figure>
+            <figcaption><strong>Logical Solution Design</strong></figcaption>
+            <img src="/Logical.png" alt="Logical Solution Design Diagram" />
+            <p class="details__diagram-desc">This mind-map shows the Logical Solution Design of Fine Dining, breaking down the Presentation Layer (UI, Dashboard), Business Logic Layer (API Endpoints, LP Module, Authentication), and Data Layer (MongoDB storage and external integrations).</p>
+          </figure>
+          <figure>
+            <figcaption><strong>Sitemap</strong></figcaption>
+            <img src="/Sitemap.png" alt="Sitemap Diagram" />
+            <p class="details__diagram-desc">The sitemap outlines the main user flow: Home → Login/Registration → Dashboard → Meal Plan Creation → Preferences → Reports & Analytics → Settings → Help, with key sub-pages for each stage.</p>
+          </figure>
+          <figure>
+            <figcaption><strong>Process Flowchart</strong></figcaption>
+            <img src="/Process.png" alt="Process Flowchart" />
+            <p class="details__diagram-desc">This flowchart depicts the runtime sequence: Start → Collect Inputs → Input Validation → Data Fetching → Linear Programming Solver → Plan Generation → Output delivery.</p>
+          </figure>
         </div>
     
         <h3>Prototypes</h3>
