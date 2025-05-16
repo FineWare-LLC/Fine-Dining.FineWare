@@ -105,67 +105,6 @@ function assembleHome(): void {
   app.append(buildHeader(), buildHero(), buildFooter());
 }
 
-/**
- * Deep‐dive Details page header (with a “Back” link).
- */
-function buildDetailsHeader(): HTMLElement {
-  const header = createElement('header', { classes: ['header'] });
-  const backLink = createElement('a', {
-    classes: ['btn', 'btn--link'],
-    attrs: { href: 'index.html' },
-    innerHTML: '← Back to Home',
-  });
-  header.append(backLink);
-  return header;
-}
-
-/**
- * A section on the Details page with a heading + rich content.
- */
-function buildDetailsSection(title: string, htmlContent: string): HTMLElement {
-  const section = createElement('section', { classes: ['details__section'] });
-  section.append(createElement('h2', { innerHTML: title }));
-  section.append(createElement('div', { innerHTML: htmlContent }));
-  return section;
-}
-
-/**
- * The Details page’s final “Get Started” CTA button.
- */
-function buildGetStarted(): HTMLElement {
-  return createElement('a', {
-    classes: ['btn', 'btn--primary', 'details__cta'],
-    attrs: {
-      href: 'https://github.com/FineWare-LLC/Fine-Dining',
-      target: '_blank',
-      rel: 'noopener',
-    },
-    innerHTML: 'Get Started on GitHub',
-  });
-}
-
-/**
- * Assembles the Details page using content straight from your poster.
- */
-function assembleDetails(): void {
-  const app = document.querySelector<HTMLDivElement>('#app');
-  if (!app) throw new Error('#app not found');
-  app.innerHTML = '';
-
-  const content = [
-    {
-      title: 'Summary',
-      html: `
-        <p>Fine Dining leverages linear programming to address the challenges of meal planning, combining cost optimization with personalized dietary requirements...</p>
-      `,
-    },
-  ];
-
-  app.append(buildDetailsHeader());
-  content.forEach(block => app.append(buildDetailsSection(block.title, block.html)));
-  app.append(buildGetStarted(), buildFooter());
-}
-
 // Kick things off based on URL
 document.addEventListener('DOMContentLoaded', () => {
   const path = window.location.pathname.replace(import.meta.env.BASE_URL, '/');
