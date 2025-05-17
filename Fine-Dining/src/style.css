@@ -3,6 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   display: flex;
+  place-items: center;
   flex-direction: column;
   max-width: 100vw;
 }
@@ -47,9 +48,8 @@ h1 {
   flex: 1;
   display: flex;
   flex-direction: column;
-  max-width: 1280px;
+  max-width: 100vw;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -226,13 +226,15 @@ button:focus-visible {
   margin-bottom: 0.5rem;
 }
 
-/* Mobile tweaks */
-@media (max-width: 600px) {
-  #app {
-    padding: 0.5rem;
-  }
-  .details__diagram-gallery figure {
-    width: 100%;
-    max-width: 100%;
+@media (min-width: 600px) {
+  body {
+    display: flex;
+    place-items: center;
   }
 }
+@media (max-width: 599px) {
+  body {
+    display: block;
+  }
+}
+
